@@ -1,29 +1,6 @@
-interface ThulloTheme {
-  colors: {
-    elements: {
-      header: string;
-      body: string;
-      boards_list: string;
-      board_card: string;
-      button: {
-        primary: string;
-        secondary: string;
-        board: string;
-        board_user: string,
-        card_save: string,
-      },
-      badge: {
-        blue: string,
-        green: string,
-        yellow: string,
-        purple: string,
-        orange: string,
-      }
-    }
-  }
-}
+import { DefaultTheme } from 'styled-components';
 
-export const lightTheme: ThulloTheme = {
+export const lightTheme: DefaultTheme = {
   colors: {
     elements: {
       board_card: '#FFF',
