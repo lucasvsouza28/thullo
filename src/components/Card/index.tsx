@@ -32,6 +32,8 @@ const Card = ({
       { (image?.length ?? 0) > 0 && (
         <SC.Image
           src={image}
+          alt={`${title}'s board image`}
+          title={title}
         />
       )}
 
@@ -62,9 +64,13 @@ const Card = ({
               {(user.avatar?.length ?? 0) > 0 ? (
                 <SC.UserAvatar
                   src={user.avatar}
+                  alt={`${user.name}'s avatar`}
+                  title={user.name}
                 />
               ): (
-                <SC.UserAbbreviaton>
+                <SC.UserAbbreviaton
+                  title={user.name}
+                >
                   {getAbbreviation(user.name)}
                 </SC.UserAbbreviaton>
               )}
