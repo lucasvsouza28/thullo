@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Button from "../Buttton";
 
 export const Container = styled.nav`
   display: flex;
@@ -40,26 +41,10 @@ export const Divider = styled.div`
   margin: 0 24px;
 `;
 
-export const AllBoardsButton = styled.button`
-  cursor: pointer;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 13px;
-
-  border: none;
-  outline: none;
-  border-radius: 8px;
-
-  background-color: ${({ theme }) => theme.colors.elements.button.secondary};
-  color: #828282;
-
-  padding: 7px 16px;
-
-  &:active {
-    transform: scale(98%);
-  }
+export const AllBoardsButton = styled(Button).attrs({
+  variant: 'secondary',
+})`
+  width: 108px;
 `;
 
 export const RightContainer = styled.div`
