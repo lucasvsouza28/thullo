@@ -14,7 +14,6 @@ const Header = () => {
             DevChallenges Board
           </SC.CurrentBoard>
           <SC.Divider />
-          {/* TODO: Create Button component */}
           <SC.AllBoardsButton>
             <CgMenuGridO
               size={12}
