@@ -32,6 +32,7 @@ export const Container = styled.div`
       border: none;
       outline: none;
     }
+    width: 100%;
   }
 `;
 

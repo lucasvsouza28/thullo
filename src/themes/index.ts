@@ -4,7 +4,7 @@ export const lightTheme: DefaultTheme = {
   colors: {
     elements: {
       board_card: '#FFF',
-      body: '#FFF',
+      body: '#F8F9FD',
       boards_list: '#F8F9FD',
       button: {
         primary: '#2F80ED',

@@ -7,4 +7,9 @@ export const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
         font-family: 'Poppins', sans-serif;
     }
+
+    body {
+      height: fit-content;
+      background-color: ${({theme}) => theme.colors.elements.body};
+    }
 `;
