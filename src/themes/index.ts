@@ -4,7 +4,7 @@ export const lightTheme: DefaultTheme = {
   colors: {
     elements: {
       board_card: '#FFF',
-      body: '#FFF',
+      body: '#F8F9FD',
       boards_list: '#F8F9FD',
       button: {
         primary: '#2F80ED',
@@ -15,11 +15,25 @@ export const lightTheme: DefaultTheme = {
       },
       header: '#FFF',
       badge: {
-        blue: '#D5E6FB',
-        green: '#D3EADD',
-        yellow: '#FCF4DB',
-        purple: '#EBDCF9',
-        orange: 'rgba(242, 153, 74, 0.2)',
+        blue: {
+          el: '#D5E6FB',
+          text: '#2F80ED',
+        },
+        green: {
+          el: '#D3EADD',
+          text: '#219653' },
+        yellow: {
+          el: '#FCF4DB',
+          text: '#F2C94C'
+        },
+        purple: {
+          el: '#EBDCF9',
+          text: '#9B51E0'
+        },
+        orange: {
+          el: 'rgba(242, 153, 74, 0.2)',
+          text: '#F2994A'
+        },
       }
     }
   }

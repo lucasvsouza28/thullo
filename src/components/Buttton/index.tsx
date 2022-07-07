@@ -2,7 +2,7 @@ import { FC, ButtonHTMLAttributes } from 'react';
 import * as SC from './button.styles';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary'
+  variant?: 'primary' | 'secondary' | 'save'
 }
 
 const Button: FC<ButtonProps> = ({

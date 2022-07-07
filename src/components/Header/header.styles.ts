@@ -11,6 +11,8 @@ export const Container = styled.nav`
   padding: 24px;
 
   box-shadow: 0px 2px 2px 0px #0000000D;
+
+  background-color: ${({theme}) => theme.colors.elements.header};
 `;
 
 export const LeftContainer = styled.div`

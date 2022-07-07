@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 type ButtonProps = {
-  variant: 'primary' | 'secondary'
+  variant: 'primary' | 'secondary' | 'save'
 }
 
 export const Container = styled.button<ButtonProps>`
@@ -23,8 +23,9 @@ export const Container = styled.button<ButtonProps>`
 
   ${props => props.variant === 'primary' && `background-color: ${props.theme.colors.elements.button.primary};`}
   ${props => props.variant === 'secondary' && `background-color: ${props.theme.colors.elements.button.secondary};`}
+  ${props => props.variant === 'save' && `background-color: ${props.theme.colors.elements.button.card_save};`}
 
-  ${props => props.variant === 'primary' && 'color: #FFF;'}
+  ${props => props.variant !== 'secondary' && 'color: #FFF;'}
   ${props => props.variant === 'secondary' && 'color: #828282;'}
 
   &:active {
