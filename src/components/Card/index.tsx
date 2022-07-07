@@ -1,5 +1,6 @@
-import { Fragment, useCallback } from 'react';
 import * as SC from './card.styles';
+import TagsList from './components/TagsList';
+import UsersList from './components/UsersList';
 
 type CardProps = {
   title: string,
@@ -17,16 +18,6 @@ const Card = ({
   tags,
   users,
 }: CardProps) => {
-  const getAbbreviation = useCallback((name: string) => {
-    let abbreviation = '';
-    const parts = name.split(' ');
-
-    if (parts.length === 1) abbreviation = parts[0][0];
-    else if (parts.length > 1) abbreviation = parts[0][0] + parts[1][0];
-
-    return abbreviation;
-  }, []);
-
   return (
     <SC.Container>
       { (image?.length ?? 0) > 0 && (
@@ -41,48 +32,13 @@ const Card = ({
         {title}
       </SC.Title>
 
-      {(tags?.length ?? 0) > 0 && (
-        <SC.TagsContainer>
-          {tags?.map((tag, i) => (
-            <SC.Tag
-              key={i}
-            >
-              {tag}
-            </SC.Tag>
-          ))}
-        </SC.TagsContainer>
-      )}
+      <TagsList
+        tags={tags}
+      />
 
-      <SC.UsersContainer>
-        {users.map((user, i) => {
-          if (i > 2) return null;
-
-          return (
-            <Fragment
-              key={i}
-            >
-              {(user.avatar?.length ?? 0) > 0 ? (
-                <SC.UserAvatar
-                  src={user.avatar}
-                  alt={`${user.name}'s avatar`}
-                  title={user.name}
-                />
-              ): (
-                <SC.UserAbbreviaton
-                  title={user.name}
-                >
-                  {getAbbreviation(user.name)}
-                </SC.UserAbbreviaton>
-              )}
-            </Fragment>
-          )})
-        }
-        {users.length > 3 && (
-          <SC.MoreUsersCaption>
-            + {users.length - 3} others
-          </SC.MoreUsersCaption>
-        )}
-      </SC.UsersContainer>
+      <UsersList
+        users={users}
+      />
     </SC.Container>
   )
 }

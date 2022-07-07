@@ -1,5 +1,10 @@
 import { DefaultTheme } from 'styled-components';
 
+interface IBadgeColors {
+  el: string,
+  text: string,
+}
+
 export module 'styled-components' {
   interface DefaultTheme {
     colors: {
@@ -16,11 +21,11 @@ export module 'styled-components' {
           card_save: string,
         },
         badge: {
-          blue: string,
-          green: string,
-          yellow: string,
-          purple: string,
-          orange: string,
+          blue: IBadgeColors,
+          green: IBadgeColors,
+          yellow: IBadgeColors,
+          purple: IBadgeColors,
+          orange: IBadgeColors,
         }
       }
     }
