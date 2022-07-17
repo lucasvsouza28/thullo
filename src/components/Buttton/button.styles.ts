@@ -1,40 +1,55 @@
-import styled from 'styled-components';
+import { styled } from "../../../stitches.config";
 
+// import styled from 'styled-components',
 type ButtonProps = {
   variant: 'primary' | 'secondary' | 'save'
 }
 
-export const Container = styled.button<ButtonProps>`
-  cursor: pointer;
+export const Container = styled('button', {
+  cursor: 'pointer',
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 13px;
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  gap: '13px',
 
-  border: none;
-  outline: none;
-  border-radius: 8px;
+  border: 'none',
+  outline: 'none',
+  borderRadius: '8px',
 
-  padding: 7px 8px;
+  padding: '7px 8px',
 
-  min-width: 32px;
-  height: 32px;
+  minWidth: '32px',
+  height: '32px',
 
-  ${props => props.variant === 'primary' && `background-color: ${props.theme.colors.elements.button.primary};`}
-  ${props => props.variant === 'secondary' && `background-color: ${props.theme.colors.elements.button.secondary};`}
-  ${props => props.variant === 'save' && `background-color: ${props.theme.colors.elements.button.card_save};`}
+  color: '#FFF',
 
-  ${props => props.variant !== 'secondary' && 'color: #FFF;'}
-  ${props => props.variant === 'secondary' && 'color: #828282;'}
+  // ${props => props.variant === 'primary' && `background-color: ${props.theme.colors.elements.button.primary},`}
+  // ${props => props.variant === 'secondary' && `background-color: ${props.theme.colors.elements.button.secondary},`}
+  // ${props => props.variant === 'save' && `background-color: ${props.theme.colors.elements.button.card_save},`}
 
-  &:active {
-    transform: scale(98%);
+  // ${props => props.variant !== 'secondary' && 'color: #FFF,'}
+  // ${props => props.variant === 'secondary' && 'color: #828282,'}
+
+  '&:active': {
+    transform: 'scale(98%)',
+  },
+
+  fontFamily: 'Poppins',
+  fontSize: '12px',
+  fontWeight: '500',
+  lineHeight: '18px',
+  letterSpacing: '-0.035em',
+
+  variants: {
+    variant: {
+      primary: {
+        backgroundColor: '$button_primary',
+      },
+      secondary: {
+        backgroundColor: '$button_secondary',
+        color: '#828282',
+      }
+    },
   }
-
-  font-family: Poppins;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 18px;
-  letter-spacing: -0.035em;
-`;
+});

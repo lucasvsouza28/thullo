@@ -14,7 +14,9 @@ const Header = () => {
             DevChallenges Board
           </SC.CurrentBoard>
           <SC.Divider />
-          <SC.AllBoardsButton>
+          <SC.AllBoardsButton
+            variant='secondary'
+          >
             <CgMenuGridO
               size={12}
               color="#828282"
