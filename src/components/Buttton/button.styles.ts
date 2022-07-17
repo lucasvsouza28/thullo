@@ -14,9 +14,6 @@ export const Container = styled('button', {
 
   padding: '7px 8px',
 
-  minWidth: '32px',
-  height: '32px',
-
   color: '#FFF',
 
   '&:active': {
@@ -40,7 +37,17 @@ export const Container = styled('button', {
       },
       save: {
         backgroundColor: '$button_save',
-      }
+      },
+    },
+    size: {
+      xs: {
+        minWidth: '28px',
+        height: '28px',
+      },
+      sm: {
+        minWidth: '32px',
+        height: '32px',
+      },
     },
   }
 });

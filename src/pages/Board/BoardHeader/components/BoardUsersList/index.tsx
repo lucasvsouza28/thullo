@@ -1,3 +1,5 @@
+import { BsPlus } from 'react-icons/bs';
+import Button from "../../../../../components/Buttton";
 import UserAvatar from "../../../../../components/UserAvatar";
 
 type BoardUsersListProps = {};
@@ -21,6 +23,15 @@ const BoardUsersList = ({
           size='md'
         />
       ))}
+      <Button
+        variant="primary"
+        size='sm'
+      >
+        <BsPlus
+          size={15}
+          color='#FFF'
+        />
+      </Button>
     </>
   )
 }

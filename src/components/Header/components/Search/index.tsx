@@ -6,7 +6,9 @@ const Search = () => {
       <input
         placeholder="Keyword..."
       />
-      <SC.SearchButton>
+      <SC.SearchButton
+        size='sm'
+      >
         Search
       </SC.SearchButton>
     </SC.Container>

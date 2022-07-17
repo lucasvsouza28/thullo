@@ -9,7 +9,8 @@ type CardProps = {
   users: {
     avatar?: string,
     name: string,
-  }[]
+  }[],
+  onAddUser?: () => void,
 };
 
 const Card = ({
@@ -17,6 +18,7 @@ const Card = ({
   title,
   tags,
   users,
+  onAddUser,
 }: CardProps) => {
   return (
     <SC.Container>
@@ -38,6 +40,7 @@ const Card = ({
 
       <UsersList
         users={users}
+        onAddUser={onAddUser}
       />
     </SC.Container>
   )

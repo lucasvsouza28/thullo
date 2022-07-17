@@ -26,6 +26,7 @@ export const {
       4: '4px',
       8: '8px',
       12: '12px',
+      24: '24px',
       full: '999px',
     },
   },

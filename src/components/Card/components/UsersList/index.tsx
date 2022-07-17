@@ -1,16 +1,20 @@
 import { Fragment } from 'react';
+import { BsPlus } from 'react-icons/bs';
+import Button from '../../../Buttton';
 import UserAvatar from '../../../UserAvatar';
 import * as SC from './users-list.styles';
 
 const UsersList = ({
   users,
+  onAddUser,
 }: {
   users: {
     avatar?: string,
     name: string,
-  }[] | undefined
+  }[] | undefined,
+  onAddUser?: () => void,
 }) => {
-  if ((users?.length ?? 0) === 0) return null;
+  if ((users?.length ?? 0) === 0 && !onAddUser) return null;
 
   return (
     <SC.UsersContainer>
@@ -26,6 +30,16 @@ const UsersList = ({
             />
           </Fragment>
       ))}
+      {onAddUser !== undefined && (
+        <Button
+          onClick={onAddUser}
+        >
+          <BsPlus
+            size={15}
+            color='#FFF'
+          />
+        </Button>
+      )}
       {users!.length > 3 && (
         <SC.MoreUsersCaption>
           + {users!.length - 3} others

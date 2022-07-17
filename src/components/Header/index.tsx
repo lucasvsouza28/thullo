@@ -16,6 +16,7 @@ const Header = () => {
           <SC.Divider />
           <SC.AllBoardsButton
             variant='secondary'
+            size='sm'
           >
             <CgMenuGridO
               size={12}

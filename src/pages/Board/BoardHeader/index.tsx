@@ -16,6 +16,7 @@ const BoardHeader = () => {
       >
         <Button
           variant="secondary"
+          size='sm'
           style={{
             width: '98px',
           }}
