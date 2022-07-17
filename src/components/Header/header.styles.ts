@@ -9,6 +9,7 @@ export const Container = styled.nav`
   height: 68.31px;
 
   padding: 24px;
+  margin-bottom: 35px;
 
   box-shadow: 0px 2px 2px 0px #0000000D;
 

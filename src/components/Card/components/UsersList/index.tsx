@@ -1,4 +1,5 @@
 import { Fragment, useCallback } from 'react';
+import UserAvatar from '../../../UserAvatar';
 import * as SC from './users-list.styles';
 
 const UsersList = ({
@@ -9,16 +10,6 @@ const UsersList = ({
     name: string,
   }[] | undefined
 }) => {
-  const getAbbreviation = useCallback((name: string) => {
-    let abbreviation = '';
-    const parts = name.split(' ');
-
-    if (parts.length === 1) abbreviation = parts[0][0];
-    else if (parts.length > 1) abbreviation = parts[0][0] + parts[1][0];
-
-    return abbreviation;
-  }, []);
-
   if ((users?.length ?? 0) === 0) return null;
 
   return (
@@ -27,19 +18,12 @@ const UsersList = ({
           <Fragment
             key={i}
           >
-            {(user.avatar?.length ?? 0) > 0 ? (
-              <SC.UserAvatar
-                src={user.avatar}
-                alt={`${user.name}'s avatar`}
-                title={user.name}
-              />
-            ): (
-              <SC.UserAbbreviaton
-                title={user.name}
-              >
-                {getAbbreviation(user.name)}
-              </SC.UserAbbreviaton>
-            )}
+            <UserAvatar
+              source={user.avatar}
+              name={user.name}
+              alt={`${user.name}'s avatar`}
+              title={user.name}
+            />
           </Fragment>
       ))}
       {users!.length > 3 && (

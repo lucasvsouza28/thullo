@@ -1,11 +1,14 @@
 import { RiArrowDownSFill } from 'react-icons/ri';
+import UserAvatar from '../../../UserAvatar';
 import * as SC from './profile.styles';
 
 const Profile = () => {
   return (
     <SC.Container>
-      <SC.ProfileImage
-        src="https://randomuser.me/api/portraits/men/66.jpg"
+      <UserAvatar
+        size='md'
+        source="https://randomuser.me/api/portraits/men/66.jpg"
+        name='current user'
       />
       <SC.Name>
         Lucas Souza

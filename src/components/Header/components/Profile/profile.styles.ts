@@ -10,13 +10,6 @@ export const Container = styled.div`
   gap: 14px;
 `;
 
-export const ProfileImage = styled.img`
-  height: 32px;
-  width: 32px;
-
-  border-radius: 8px;
-`;
-
 export const Name = styled.span`
   font-family: Noto Sans;
   font-size: 12px;
