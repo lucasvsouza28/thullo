@@ -8,8 +8,8 @@ function App() {
   return (
     <main className={theme}>
       <Header />
-      <AllBoardsPage />
-      {/* <BoardPage /> */}
+      <BoardPage />
+      {/* <AllBoardsPage /> */}
     </main>
   )
 }

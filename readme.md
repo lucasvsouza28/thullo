@@ -4,7 +4,7 @@ Thullo is a fullstack challenge from [devchallenges.io](https://devchallenges.io
 ## Built with ❤ and:
 - react
 - firebase
-- styled-components
+- stitches
 
 ## Where is it published?
 Not published yet (probably on netlify in the future)

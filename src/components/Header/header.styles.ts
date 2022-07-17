@@ -1,4 +1,3 @@
-//import styled from "styled-components";
 import { styled } from "../../../stitches.config";
 import Button from "../Buttton";
 

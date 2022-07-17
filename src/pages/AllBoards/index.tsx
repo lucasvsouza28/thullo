@@ -38,8 +38,9 @@ const AllBoardsPage = ({
         padding: '60px 0',
       }}
     >
-      {boards.map(board => (
+      {boards.map((board, i) => (
         <Card
+          key={i}
           {...board}
         />
       ))}

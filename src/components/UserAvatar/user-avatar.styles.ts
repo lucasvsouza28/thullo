@@ -1,39 +1,52 @@
-import styled from 'styled-components';
+import { styled } from '../../../stitches.config';
 
 type SizeOptions = 'sm' | 'md';
 
-const getSize = (size: SizeOptions) => {
-  const sizes = new Map<SizeOptions, string>();
-  sizes.set('sm', '28px');
-  sizes.set('md', '32px');
+export const Container = styled('img', {
+  objectFit: 'cover',
 
-  return sizes.get(size);
-};
+  borderRadius: '$8',
 
-export const Container = styled.img<{ size: SizeOptions }>`
-  height: ${({ size }) => getSize(size)};
-  width: ${({ size }) => getSize(size)};
-  object-fit: cover;
+  variants: {
+    size: {
+      sm: {
+        height: '28px',
+        width: '28px',
+      },
+      md: {
+        height: '32px',
+        width: '32px',
+      }
+    }
+  }
+});
 
-  border-radius: 8px;
-`;
+export const UserAbbreviaton = styled('span', {
+  display: 'grid',
+  placeItems: 'center',
 
-export const UserAbbreviaton = styled.span<{ size: SizeOptions }>`
-  display: grid;
-  place-items: center;
+  backgroundColor: '#BDBDBD',
+  color: '#fff',
 
-  background-color: #BDBDBD;
-  color: #fff;
+  padding: '6px 5px',
 
-  padding: 6px 5px;
+  fontSize: '12px',
+  fontWeight: '500',
+  lineHeight: '18px',
+  letterSpacing: '-0.035em',
 
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 18px;
-  letter-spacing: -0.035em;
+  borderRadius: '$8',
 
-  border-radius: 8px;
-
-  height: ${({ size }) => getSize(size)};
-  width: ${({ size }) => getSize(size)};
-`;
+  variants: {
+    size: {
+      sm: {
+        height: '28px',
+        width: '28px',
+      },
+      md: {
+        height: '32px',
+        width: '32px',
+      }
+    }
+  }
+});
