@@ -16,10 +16,17 @@ export const {
       button_secondary: '#F2F2F2',
       button_save: '#219653',
       element_header: '#FFF',
+      element_board_card: '#FFF',
     },
     fonts: {
       Poppins: 'Poppins',
       'Noto-Sans': 'Noto Sans',
+    },
+    radii: {
+      4: '4px',
+      8: '8px',
+      12: '12px',
+      full: '999px',
     },
   },
   media: {

@@ -1,37 +1,36 @@
-import styled from 'styled-components';
+import { styled } from "../../../stitches.config"
 
-export const Container = styled.div`
-  cursor: pointer;
+export const Container = styled('div', {
+  cursor: 'pointer',
 
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '12px',
 
-  border-radius: 8px;
+  borderRadius: '$8',
 
-  padding: 12px 12px 18px;
+  padding: '12px 12px 18px',
 
-  background-color: ${({ theme }) => theme.colors.elements.board_card};
+  backgroundColor: '$element_board_card',
 
-  width: 243px;
-  min-height: 243px;
+  width: '243px',
+  minHeight: '243px',
 
-  box-shadow: 0px 4px 12px 0px #0000000D;
-`;
+  boxShadow: '0px 4px 12px 0px #0000000D',
+});
 
-export const Image = styled.img`
-  width: 100%;
-  height: 130px;
-  object-fit: cover;
+export const Image = styled('img', {
+  width: '100%',
+  height: '130px',
+  objectFit: 'cover',
 
-  border-radius: 12px;
+  borderRadius: '$12',
+});
 
-`;
-
-export const Title = styled.span`
-  font-family: Noto Sans;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: -0.035em;
-`;
+export const Title = styled('div', {
+  fontFamily: '$Noto-Sans',
+  fontSize: '16px',
+  fontWeight: '400',
+  lineHeight: '22px',
+  letterSpacing: '-0.035em',
+});

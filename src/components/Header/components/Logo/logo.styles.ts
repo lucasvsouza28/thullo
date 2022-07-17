@@ -27,7 +27,7 @@ export const Logo = styled('div', {
 
     backgroundColor: '#2F80ED',
 
-    borderRadius: '4px',
+    borderRadius: '$4',
   },
 
   '&:after': {
@@ -38,6 +38,6 @@ export const Logo = styled('div', {
 
     backgroundColor: '#2F80ED',
 
-    borderRadius: '4px',
+    borderRadius: '$4',
   },
 });

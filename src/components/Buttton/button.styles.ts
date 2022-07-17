@@ -10,7 +10,7 @@ export const Container = styled('button', {
 
   border: 'none',
   outline: 'none',
-  borderRadius: '8px',
+  borderRadius: '$8',
 
   padding: '7px 8px',
 

@@ -1,4 +1,4 @@
-import { Fragment, useCallback } from 'react';
+import { Fragment } from 'react';
 import UserAvatar from '../../../UserAvatar';
 import * as SC from './users-list.styles';
 

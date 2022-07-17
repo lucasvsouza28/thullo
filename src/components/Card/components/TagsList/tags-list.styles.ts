@@ -1,27 +1,48 @@
-import styled from 'styled-components';
+import { styled } from "../../../../../stitches.config";
 
-export const Container = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-`;
+export const Container = styled('div', {
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: '12px',
+});
 
-export const Tag = styled.span<{ color: string, background: string }>`
-  display: grid;
-  place-items: center;
+export const Tag = styled('span', {
+  display: 'grid',
+  placeItems: 'center',
 
-  height: 18px;
+  height: '18px',
 
-  border-radius: 8px;
+  borderRadius: '$8',
 
-  color: ${({ color }) => color};
-  background-color: ${({ background }) => background};
+  padding: '2px 9px',
 
-  padding: 2px 9px;
+  fontFamily: '$Noto-Sans',
+  fontSize: '10px',
+  fontWeight: '500',
+  lineHeight: '14px',
+  letterSpacing: '-0.035em',
 
-  font-family: Noto Sans;
-  font-size: 10px;
-  font-weight: 500;
-  line-height: 14px;
-  letter-spacing: -0.035em;
-`;
+  variants: {
+    color: {
+      blue: {
+        backgroundColor: '#D5E6FB',
+        color: '#2F80ED',
+      },
+      green: {
+        backgroundColor: '#D3EADD',
+        color: '#219653' },
+      yellow: {
+        backgroundColor: '#FCF4DB',
+        color: '#F2C94C'
+      },
+      purple: {
+        backgroundColor: '#EBDCF9',
+        color: '#9B51E0'
+      },
+      orange: {
+        backgroundColor: 'rgba(242, 153, 74, 0.2)',
+        color: '#F2994A'
+      },
+    }
+  },
+});

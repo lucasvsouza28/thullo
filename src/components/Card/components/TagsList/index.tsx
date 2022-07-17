@@ -1,5 +1,4 @@
 import { useCallback } from 'react';
-import { useTheme } from 'styled-components';
 import * as SC from './tags-list.styles';
 
 const TagsList = ({
@@ -7,16 +6,18 @@ const TagsList = ({
 }: {
   tags: string[] | undefined,
 }) => {
-  const theme = useTheme();
+  const getRandomTagColor = useCallback(() => {
+    type TagColorType = 'blue' | 'green' | 'yellow' |'purple' | 'orange';
+    const colors = [
+      'blue',
+      'green',
+      'yellow',
+      'purple',
+      'orange',
+    ];
+    const idx = Math.floor(Math.random() * colors.length);
 
-  const getTagColors = useCallback(() => {
-    type BadgeType = typeof theme.colors.elements.badge;
-    const badge = theme.colors.elements.badge;
-    const colors = Object.keys(badge);
-    const randIndex = Math.floor(Math.random() * colors.length);
-    const key = colors[randIndex] as keyof BadgeType;
-
-    return badge[key];
+    return colors[idx] as TagColorType;
   }, []);
 
   if ((tags?.length ?? 0) === 0) return null;
@@ -24,13 +25,12 @@ const TagsList = ({
   return (
     <SC.Container>
       {tags!.map((tag, i) => {
-        const { el, text } = getTagColors();
+        const color = getRandomTagColor();
 
         return (
           <SC.Tag
             key={i}
-            color={text}
-            background={el}
+            color={color}
           >
             {tag}
           </SC.Tag>
