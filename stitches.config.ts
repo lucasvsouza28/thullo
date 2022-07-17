@@ -14,6 +14,7 @@ export const {
     colors: {
       button_primary: '#2F80ED',
       button_secondary: '#F2F2F2',
+      button_save: '#219653',
     },
     fonts: {
       Poppins: 'Poppins',

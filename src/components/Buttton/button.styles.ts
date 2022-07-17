@@ -1,10 +1,5 @@
 import { styled } from "../../../stitches.config";
 
-// import styled from 'styled-components',
-type ButtonProps = {
-  variant: 'primary' | 'secondary' | 'save'
-}
-
 export const Container = styled('button', {
   cursor: 'pointer',
 
@@ -24,13 +19,6 @@ export const Container = styled('button', {
 
   color: '#FFF',
 
-  // ${props => props.variant === 'primary' && `background-color: ${props.theme.colors.elements.button.primary},`}
-  // ${props => props.variant === 'secondary' && `background-color: ${props.theme.colors.elements.button.secondary},`}
-  // ${props => props.variant === 'save' && `background-color: ${props.theme.colors.elements.button.card_save},`}
-
-  // ${props => props.variant !== 'secondary' && 'color: #FFF,'}
-  // ${props => props.variant === 'secondary' && 'color: #828282,'}
-
   '&:active': {
     transform: 'scale(98%)',
   },
@@ -49,6 +37,9 @@ export const Container = styled('button', {
       secondary: {
         backgroundColor: '$button_secondary',
         color: '#828282',
+      },
+      save: {
+        backgroundColor: '$button_save',
       }
     },
   }
