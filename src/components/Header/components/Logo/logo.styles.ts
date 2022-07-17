@@ -1,43 +1,43 @@
-import styled from 'styled-components';
+import { styled } from "../../../../../stitches.config";
 
-export const Container = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 12px;
+export const Container = styled('div', {
+  display: 'flex',
+  alignItems: 'center',
+  gap: '12px',
 
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 27px;
-  letter-spacing: -0.035em;
-`;
+  fontWeight: '600',
+  fontSize: '18px',
+  lineHeight: '27px',
+  letterSpacing: '-0.035em',
+});
 
-export const Logo = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+export const Logo = styled('div', {
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'flex-start',
 
-  width: 32px;
-  height: 29px;
+  width: '32px',
+  height: '29px',
 
-  &:before{
-    content: '';
+  '&:before': {
+    content: '',
 
-    height: 100%;
-    width: 14px;
+    height: '100%',
+    width: '14px',
 
-    background-color: #2F80ED;
+    backgroundColor: '#2F80ED',
 
-    border-radius: 4px;
-  }
+    borderRadius: '4px',
+  },
 
-  &:after{
-    content: '';
+  '&:after': {
+    content: '',
 
-    height: 60%;
-    width: 14px;
+    height: '60%',
+    width: '14px',
 
-    background-color: #2F80ED;
+    backgroundColor: '#2F80ED',
 
-    border-radius: 4px;
-  }
-`;
+    borderRadius: '4px',
+  },
+});

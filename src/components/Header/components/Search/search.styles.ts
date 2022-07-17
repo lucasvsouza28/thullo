@@ -1,42 +1,42 @@
-import styled from 'styled-components';
+import { styled } from '../../../../../stitches.config';
 import Button from '../../../Buttton';
 
-export const Container = styled.div`
-  display: flex;
-  justify-content: space-between;
+export const Container = styled('div', {
+  display: 'flex',
+  justifyContent: 'space-between',
 
-  height: 34px;
-  width: 338px;
+  height: '34px',
+  width: '338px',
 
-  box-shadow: 0px 4px 12px 0px #0000001A;
+  boxShadow: '0px 4px 12px 0px #0000001A',
 
-  border-radius: 8px;
+  borderRradius: '8px',
 
-  & input {
-    padding: 9px 0 9px 13px;
+  '& input': {
+    padding: '9px 0 9px 13px',
 
-    border: none;
+    border: 'none',
 
-    font-size: 10px;
-    font-weight: 500;
-    line-height: 15px;
-    letter-spacing: -0.035em;
-    text-align: left;
+    fontSize: '10px',
+    fontWeight: '500',
+    lineHeight: '15px',
+    letterSpacing: '-0.035em',
+    textAlign: 'left',
 
+    '&:placeholder': {
+      color: '#BDBDBD',
+    },
 
-    &:placeholder {
-      color: #BDBDBD;
-    }
+    '&:active, &:focus': {
+      border: 'none',
+      outline: 'none',
+    },
 
-    &:active, &:focus {
-      border: none;
-      outline: none;
-    }
-    width: 100%;
+    width: '100%',
   }
-`;
+});
 
-export const SearchButton = styled(Button)`
-  width: 74px;
-  height: 100%;
-`;
+export const SearchButton = styled(Button, {
+  width: '74px',
+  height: '100%',
+});

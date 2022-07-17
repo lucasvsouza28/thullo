@@ -14,7 +14,7 @@ export const Container = styled('nav', {
 
   boxShadow: '0px 2px 2px 0px #0000000D',
 
-  // backgroundColor: ${({theme}) => theme.colors.elements.header},
+  backgroundColor: '$element_header',
 }
 );
 
