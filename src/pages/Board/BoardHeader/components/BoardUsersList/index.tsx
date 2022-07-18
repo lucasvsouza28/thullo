@@ -8,9 +8,9 @@ const BoardUsersList = ({
 
 }: BoardUsersListProps) => {
   const users = [
-    { avatar: '', name: 'Lucas' },
-    { avatar: 'https://cataas.com/cat', name: 'Adriana Domingues' },
-    { avatar: 'https://cataas.com/cat', name: 'Catarina Domingues' },
+    { avatar: 'https://avatars.dicebear.com/api/big-smile/lucasvsouza.svg', name: 'Lucas' },
+    { avatar: 'https://avatars.dicebear.com/api/female/adriana.svg', name: 'Adriana Domingues' },
+    { avatar: 'https://avatars.dicebear.com/api/female/catarina.svg', name: 'Catarina Domingues' },
   ];
 
   return (

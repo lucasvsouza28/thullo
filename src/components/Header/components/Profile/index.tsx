@@ -7,7 +7,7 @@ const Profile = () => {
     <SC.Container>
       <UserAvatar
         size='md'
-        source="https://randomuser.me/api/portraits/men/66.jpg"
+        source="https://avatars.dicebear.com/api/big-smile/lucasvsouza.svg"
         name='current user'
       />
       <SC.Name>

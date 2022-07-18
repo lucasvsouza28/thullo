@@ -48,3 +48,5 @@ export const globalStyles = globalCss({
     fontFamily: '$Poppins',
   }
 });
+
+export const Box = styled('div', {});
