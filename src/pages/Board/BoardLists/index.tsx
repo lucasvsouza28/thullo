@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import { BsThreeDots } from 'react-icons/bs';
+import { BsPlusLg, BsThreeDots } from 'react-icons/bs';
 import { Box } from '../../../../stitches.config';
 import Card from '../../../components/Card';
 import * as SC from './board-lists.styles';
@@ -28,6 +28,10 @@ const BoardLists = () => {
     console.log('onAddUser', { board, card });
   }, []);
 
+  const handleAddCard = useCallback((board: BoardType) => {
+    console.log('handleAddCard', { board });
+  }, []);
+
   return (
     <SC.Container>
       {boards.map((board, i) => (
@@ -52,6 +56,11 @@ const BoardLists = () => {
               onAddUser={() => handleAddUser(board, card)}
             />
           ))}
+          <SC.AddBoardCardButton
+            onClick={() => handleAddCard(board)}
+          >
+            Add another card <BsPlusLg color='#2F80ED' />
+          </SC.AddBoardCardButton>
         </SC.BoardListItem>
       ))}
     </SC.Container>

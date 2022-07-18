@@ -46,3 +46,25 @@ export const IconButton = styled('button', {
     transform: 'scale(98%)',
   }
 });
+
+export const AddBoardCardButton = styled('button', {
+  cursor: 'pointer',
+
+  display: 'flex',
+  justifyContent: 'space-between',
+
+  border: 'none',
+  outline: 'none',
+
+  background: '#DAE4FD',
+
+  padding: '8px 12px',
+
+  color: '#2F80ED',
+
+  borderRadius: '$8',
+
+  '&:active' : {
+    transform: 'scale(98%)'
+  }
+});
