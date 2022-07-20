@@ -10,9 +10,11 @@ export const Container = styled('div', {
 
   boxShadow: '0px 4px 12px 0px #0000001A',
 
-  borderRradius: '8px',
+  borderRadius: '$8',
 
-  '& input': {
+  '&>input': {
+    background: 'transparent',
+
     padding: '9px 0 9px 13px',
 
     border: 'none',

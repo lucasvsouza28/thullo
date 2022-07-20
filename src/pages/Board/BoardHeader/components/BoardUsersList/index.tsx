@@ -1,3 +1,4 @@
+import { useCallback } from 'react';
 import { BsPlus } from 'react-icons/bs';
 import Button from "../../../../../components/Buttton";
 import UserAvatar from "../../../../../components/UserAvatar";
@@ -8,10 +9,14 @@ const BoardUsersList = ({
 
 }: BoardUsersListProps) => {
   const users = [
-    { avatar: 'https://avatars.dicebear.com/api/big-smile/lucasvsouza.svg', name: 'Lucas' },
-    { avatar: 'https://avatars.dicebear.com/api/female/adriana.svg', name: 'Adriana Domingues' },
-    { avatar: 'https://avatars.dicebear.com/api/female/catarina.svg', name: 'Catarina Domingues' },
+    { avatar: 'https://avatars.dicebear.com/api/big-smile/lucasvsouza.svg?b=lightgray', name: 'Lucas' },
+    { avatar: 'https://avatars.dicebear.com/api/female/adriana.svg?b=lightgray', name: 'Adriana Domingues' },
+    { avatar: 'https://avatars.dicebear.com/api/female/catarina.svg?b=lightgray', name: 'Catarina Domingues' },
   ];
+
+  const handleAddMember = useCallback(() => {
+    console.log('handleAddMember')
+  }, []);
 
   return (
     <>
@@ -26,6 +31,7 @@ const BoardUsersList = ({
       <Button
         variant="primary"
         size='sm'
+        onClick={handleAddMember}
       >
         <BsPlus
           size={15}

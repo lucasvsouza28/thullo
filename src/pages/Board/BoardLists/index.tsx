@@ -73,9 +73,9 @@ function getBoards(){
       title: 'Backlog',
       items: [
         { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: [
-          { avatar: 'https://avatars.dicebear.com/api/big-smile/lucasvsouza28.svg', name: 'Lucas Souza' },
-          { avatar: 'https://avatars.dicebear.com/api/big-smile/adriana.svg', name: 'Adriana Domingues' },
-          { avatar: 'https://avatars.dicebear.com/api/big-smile/catarina.svg', name: 'Cacá' },
+          { avatar: 'https://avatars.dicebear.com/api/big-smile/lucasvsouza28.svg?b=lightgray', name: 'Lucas Souza' },
+          { avatar: 'https://avatars.dicebear.com/api/big-smile/adriana.svg?b=lightgray', name: 'Adriana Domingues' },
+          { avatar: 'https://avatars.dicebear.com/api/big-smile/catarina.svg?b=lightgray', name: 'Cacá' },
 
         ]},
         { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock() },
@@ -137,7 +137,7 @@ function getUsersMock(){
   const users = (new Array(randomCount)).fill(0);
 
   return users.map((_, i) => ({
-    avatar: `https://avatars.dicebear.com/api/big-smile/${Math.ceil(Math.random() * 10) + i}.svg`,
+    avatar: `https://avatars.dicebear.com/api/big-smile/${Math.ceil(Math.random() * 10) + i}.svg?b=lightgray`,
     name: `user-${i}`
   }));
 }

@@ -38,7 +38,21 @@ export const Container = styled('button', {
       save: {
         backgroundColor: '$button_save',
       },
+
+      outlined: {
+        backgroundColor: '#FFF',
+      }
     },
+    color: {
+        gray: {
+          color: '#828282',
+          border: '1px solid #BDBDBD',
+        },
+        red: {
+          color: '#EB5757',
+          border: '1px solid #EB5757',
+        }
+      },
     size: {
       xs: {
         minWidth: '28px',
@@ -49,5 +63,5 @@ export const Container = styled('button', {
         height: '32px',
       },
     },
-  }
+  },
 });

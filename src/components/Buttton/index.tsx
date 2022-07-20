@@ -2,13 +2,15 @@ import { FC, ButtonHTMLAttributes } from 'react';
 import * as SC from './button.styles';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'save',
+  variant?: 'primary' | 'secondary' | 'save' | 'outlined',
+  color?: 'gray' | 'red',
   size?: 'xs' | 'sm',
 }
 
 const Button: FC<ButtonProps> = ({
   variant = 'primary',
   size = 'xs',
+  color,
   children,
   ...props
 }) => {
@@ -16,6 +18,7 @@ const Button: FC<ButtonProps> = ({
     <SC.Container
       variant={variant}
       size={size}
+      color={color}
       {...props}
     >
       {children}

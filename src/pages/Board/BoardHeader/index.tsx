@@ -57,7 +57,11 @@ const BoardVisibilitySelect = ({
   );
 };
 
-const BoardHeader = () => {
+const BoardHeader = ({
+  onOpenSidesheet,
+}: {
+  onOpenSidesheet: () => void
+}) => {
   const [isBoardVisibilityOpen, setIsBoardVisibilityOpen] = useState(false);
   const boardVisibility: BoardVisibilityType = 'private';
 
@@ -91,6 +95,7 @@ const BoardHeader = () => {
       </div>
       <Button
         variant="secondary"
+        onClick={onOpenSidesheet}
         style={{
           width: '117px',
         }}
