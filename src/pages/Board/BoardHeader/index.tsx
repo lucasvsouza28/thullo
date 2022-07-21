@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react';
 import { BiLock, BiDotsHorizontalRounded } from 'react-icons/bi';
 import { GiEarthAmerica } from 'react-icons/gi';
+import { BoardType } from '../../../@types';
 import Button from '../../../components/Buttton';
 import * as SC from './board-header.styles';
 import BoardUsersList from './components/BoardUsersList';
@@ -58,12 +59,13 @@ const BoardVisibilitySelect = ({
 };
 
 const BoardHeader = ({
+  board,
   onOpenSidesheet,
 }: {
+  board: BoardType | undefined,
   onOpenSidesheet: () => void
 }) => {
   const [isBoardVisibilityOpen, setIsBoardVisibilityOpen] = useState(false);
-  const boardVisibility: BoardVisibilityType = 'private';
 
   return (
     <SC.Container>
@@ -88,10 +90,12 @@ const BoardHeader = ({
         </Button>
         { isBoardVisibilityOpen && (
           <BoardVisibilitySelect
-            visibility={boardVisibility}
+            visibility={board?.visibility || 'public'}
           />
         )}
-        <BoardUsersList />
+        <BoardUsersList
+          members={board?.members}
+        />
       </div>
       <Button
         variant="secondary"

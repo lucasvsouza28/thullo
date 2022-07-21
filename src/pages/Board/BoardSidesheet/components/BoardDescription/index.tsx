@@ -5,7 +5,7 @@ import Button from "../../../../../components/Buttton";
 import Subtitle from "../Subtitle";
 
 type BoardDescriptionProps = {
-  board: BoardType,
+  board: BoardType | undefined,
 };
 
 const BoardDescription = ({
@@ -46,7 +46,7 @@ const BoardDescription = ({
         color: '#000000',
       }}
     >
-      {board.description}
+      {board?.description}
     </p>
   </div>
 );

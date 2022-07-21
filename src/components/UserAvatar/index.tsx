@@ -29,6 +29,7 @@ const UserAvatar = ({
         <SC.Container
           src={source}
           size={size}
+          title={name}
           {...props}
         />
       ) : (

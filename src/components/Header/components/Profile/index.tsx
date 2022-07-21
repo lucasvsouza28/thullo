@@ -1,17 +1,24 @@
 import { RiArrowDownSFill } from 'react-icons/ri';
+import { UserType } from '../../../../@types';
 import UserAvatar from '../../../UserAvatar';
 import * as SC from './profile.styles';
 
-const Profile = () => {
+type ProfileProps = {
+  owner: UserType | undefined;
+}
+
+const Profile = ({
+  owner,
+}: ProfileProps) => {
   return (
     <SC.Container>
       <UserAvatar
         size='md'
-        source="https://avatars.dicebear.com/api/big-smile/lucasvsouza.svg?b=lightgray"
-        name='current user'
+        source={owner?.avatar}
+        name={owner?.name ?? ''}
       />
       <SC.Name>
-        Lucas Souza
+        {owner?.name}
       </SC.Name>
       <RiArrowDownSFill
         size={18}

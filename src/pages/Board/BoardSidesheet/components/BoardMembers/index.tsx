@@ -4,9 +4,10 @@ import { BoardType } from "../../../../../@types";
 import Button from "../../../../../components/Buttton";
 import UserAvatar from "../../../../../components/UserAvatar";
 import Subtitle from "../Subtitle";
+import * as SC from './board-members.styles';
 
 type BoardMembersProps = {
-  board: BoardType
+  board: BoardType | undefined,
 };
 
 const BoardMembers = ({
@@ -17,55 +18,30 @@ const BoardMembers = ({
   }, [board]);
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 18,
-      }}
-    >
+    <SC.Containter>
       <Subtitle
         icon={HiUsers}
         text="Members"
       />
 
-      <ul
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: 18,
-        }}
-      >
+      <SC.MembersList>
         { (board?.members ?? []).map((member, i) => (
-          <div
+          <SC.MemberListItem
             key={i}
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-            }}
           >
-            <UserAvatar
-              size="sm"
-              name={member.name}
-              source={member.avatar}
-            />
+            <SC.MemberInfoContainer>
+              <UserAvatar
+                size="md"
+                name={member.name}
+                source={member.avatar}
+              />
+              {member.name}
+            </SC.MemberInfoContainer>
 
-            { member.id === board.owner.id ? (
-              <span
-                style={{
-                  width: '70px',
-                  textAlign: 'center',
-                  fontFamily: 'Poppins',
-                  fontSize: '10px',
-                  fontWeight: '500',
-                  lineHeight: '15px',
-                  letterSpacing: '-0.035em',
-                  color: '#BDBDBD',
-                }}
-              >
+            { member.id === board?.owner.id ? (
+              <SC.Owner>
                 Admin
-              </span>
+              </SC.Owner>
             ) : (
               <Button
                 variant='outlined'
@@ -75,10 +51,10 @@ const BoardMembers = ({
                 Remove
               </Button>
             )}
-          </div>
+          </SC.MemberListItem>
         ))}
-      </ul>
-    </div>
+      </SC.MembersList>
+    </SC.Containter>
   )
 };
 

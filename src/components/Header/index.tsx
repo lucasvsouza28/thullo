@@ -3,15 +3,19 @@ import { CgMenuGridO } from 'react-icons/cg';
 import * as SC from './header.styles';
 import Search from './components/Search';
 import Profile from './components/Profile';
+import useFetchBoard from '../../hooks/useFetchBoard';
 
 const Header = () => {
+  const boardId = '0';
+  const { data: board } = useFetchBoard(boardId);
+
   return (
     <SC.Container>
       <SC.LeftContainer className="left-container">
         <Logo />
         <SC.BoardInfo>
           <SC.CurrentBoard>
-            DevChallenges Board
+            {board?.name}
           </SC.CurrentBoard>
           <SC.Divider />
           <SC.AllBoardsButton
@@ -29,7 +33,9 @@ const Header = () => {
       <div />
       <SC.RightContainer>
         <Search />
-        <Profile />
+        <Profile
+          owner={board?.owner}
+        />
       </SC.RightContainer>
     </SC.Container>
   )

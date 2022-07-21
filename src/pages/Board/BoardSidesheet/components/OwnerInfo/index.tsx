@@ -4,7 +4,7 @@ import UserAvatar from '../../../../../components/UserAvatar';
 import Subtitle from "../Subtitle";
 
 type OwnerInfoProps = {
-  board: BoardType,
+  board: BoardType | undefined,
 };
 
 const OwnerInfo = ({
@@ -24,8 +24,8 @@ const OwnerInfo = ({
       }}
     >
       <UserAvatar
-        name={board.owner.name}
-        source={board.owner.avatar}
+        name={board?.owner.name ?? ''}
+        source={board?.owner.avatar}
         size='md'
       />
       <div
@@ -46,7 +46,7 @@ const OwnerInfo = ({
             color: '#333333',
           }}
         >
-          {board.owner.name}
+          {board?.owner.name}
         </span>
         <span
           style={{
@@ -58,7 +58,7 @@ const OwnerInfo = ({
             color: '#BDBDBD',
           }}
         >
-          {board.createdAt.toLocaleDateString()}
+          {board?.createdAt.toLocaleDateString()}
         </span>
       </div>
     </div>
