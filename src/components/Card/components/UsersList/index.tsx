@@ -1,20 +1,31 @@
 import { Fragment } from 'react';
 import { BsPlus } from 'react-icons/bs';
+import { CgAttachment } from 'react-icons/cg';
+import { MdInsertComment } from 'react-icons/md';
+import { UserType } from '../../../../@types';
 import Button from '../../../Buttton';
 import UserAvatar from '../../../UserAvatar';
 import * as SC from './users-list.styles';
 
+type UsersListProps = {
+  users: UserType[] | undefined,
+  commentsCount: number,
+  attachmentsCount: number,
+  onAddUser?: () => void,
+  variant?: 'more-users' | 'actions',
+};
+
 const UsersList = ({
   users,
+  commentsCount,
+  attachmentsCount,
   onAddUser,
-}: {
-  users: {
-    avatar?: string,
-    name: string,
-  }[] | undefined,
-  onAddUser?: () => void,
-}) => {
+  variant = 'more-users',
+}: UsersListProps) => {
   if ((users?.length ?? 0) === 0 && !onAddUser) return null;
+
+  const showMoreUsers = variant === 'more-users' && users!.length > 3;
+  const showActions = variant === 'actions';
 
   return (
     <SC.UsersContainer>
@@ -40,10 +51,28 @@ const UsersList = ({
           />
         </Button>
       )}
-      {users!.length > 3 && (
+      {showMoreUsers && (
         <SC.MoreUsersCaption>
-          + {users!.length - 3} others
+          + {(users?.length ?? 0) - 3} others
         </SC.MoreUsersCaption>
+      )}
+      {showActions && (
+        <>
+          <SC.ActionCounterContainer>
+            <MdInsertComment
+              color='#BDBDBD'
+              size={12}
+            />
+            <span>{commentsCount}</span>
+          </SC.ActionCounterContainer>
+          <SC.ActionCounterContainer>
+            <CgAttachment
+              color='#BDBDBD'
+              size={12}
+            />
+            <span>{attachmentsCount}</span>
+          </SC.ActionCounterContainer>
+        </>
       )}
     </SC.UsersContainer>
   )

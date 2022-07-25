@@ -1,16 +1,17 @@
+import { UserType } from '../../@types';
 import * as SC from './card.styles';
 import TagsList from './components/TagsList';
 import UsersList from './components/UsersList';
 
 type CardProps = {
+  variant?: 'more-users' | 'actions',
   title: string,
   image?: string;
-  tags?: string[],
-  users: {
-    avatar?: string,
-    name: string,
-  }[],
-  onAddUser?: () => void,
+  tags?: string[];
+  users: UserType[] | undefined;
+  commentsCount?: number;
+  attachmentsCount?: number;
+  onAddUser?: () => void;
 };
 
 const Card = ({
@@ -19,6 +20,9 @@ const Card = ({
   tags,
   users,
   onAddUser,
+  commentsCount = 0,
+  attachmentsCount = 0,
+  variant = 'more-users',
 }: CardProps) => {
   return (
     <SC.Container>
@@ -39,8 +43,11 @@ const Card = ({
       />
 
       <UsersList
+        variant={variant}
         users={users}
         onAddUser={onAddUser}
+        commentsCount={commentsCount}
+        attachmentsCount={attachmentsCount}
       />
     </SC.Container>
   )

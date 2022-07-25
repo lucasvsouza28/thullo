@@ -18,12 +18,7 @@ const BoardSidesheet = ({
 }: BoardSidesheetProps) => {
   return (
     <SC.Container
-      css={{
-        transition: 'all .2s ease-in-out',
-        right: open ? '0' : '-500px',
-        opacity: open ? '1' : '0',
-        width: open ? '377px' : '0',
-      }}
+      open={open}
     >
       <SC.Header>
         <h5>{board?.name}</h5>

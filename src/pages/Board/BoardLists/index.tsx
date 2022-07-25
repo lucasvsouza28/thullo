@@ -1,9 +1,6 @@
-import { useCallback } from 'react';
-import { BsPlusLg, BsThreeDots } from 'react-icons/bs';
-import { Box } from '../../../../stitches.config';
-import { BoardListType, BoardType, CardType } from '../../../@types';
-import Card from '../../../components/Card';
+import { BoardType } from '../../../@types';
 import * as SC from './board-lists.styles';
+import BoardListItem from './BoardListItem';
 
 type BoardListsProps = {
   board: BoardType | undefined,
@@ -12,47 +9,16 @@ type BoardListsProps = {
 const BoardLists = ({
   board,
 }: BoardListsProps) => {
-  const handleAddUser = useCallback((board: BoardListType, card: CardType) => {
-    console.log('onAddUser', { board, card });
-  }, []);
-
-  const handleAddCard = useCallback((list: BoardListType) => {
-    console.log('handleAddCard', { list });
-  }, []);
-
   return (
     <SC.Container>
       {(board?.lists ?? []).map((list, i) => (
-        <SC.BoardListItem
-          key={`${list}-${i}`}
-        >
-          <Box css={{
-            display: 'flex',
-            justifyContent: 'space-between',
-          }}>
-            <SC.BoardTitle>
-              { list.title }
-            </SC.BoardTitle>
-            <SC.IconButton>
-              <BsThreeDots color='#828282' size={14} />
-            </SC.IconButton>
-          </Box>
-          { (list?.items ?? []).map((card, j) => (
-            <Card
-              key={`board-${i}-card-${j}`}
-              {...card}
-              onAddUser={() => handleAddUser(list, card)}
-            />
-          ))}
-          <SC.AddBoardCardButton
-            onClick={() => handleAddCard(list)}
-          >
-            Add another card <BsPlusLg color='#2F80ED' />
-          </SC.AddBoardCardButton>
-        </SC.BoardListItem>
+        <BoardListItem
+          key={i}
+          list={list}
+        />
       ))}
     </SC.Container>
   )
 }
 
-export default BoardLists
+export default BoardLists;

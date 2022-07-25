@@ -5,8 +5,8 @@ export const Container = styled('div', {
   flexDirection: 'column',
   gap: 24,
 
-  position: 'absolute',
-  top: '-35px',
+  position: 'fixed',
+  top: '70px',
   bottom: 0,
 
   backgroundColor: '#FFF',
@@ -14,6 +14,24 @@ export const Container = styled('div', {
   boxShadow: '0px 4px 12px 0px #0000000D',
 
   padding: '23px 20px',
+
+  transition: 'all .2s ease-in-out',
+
+  variants: {
+    open: {
+      true: {
+        opacity: '1',
+        right: '0',
+        width: '377px',
+      },
+      false: {
+        opacity: '0',
+        right: '-500px',
+        width: '0',
+      }
+    }
+  }
+
 });
 
 export const Header = styled('div', {

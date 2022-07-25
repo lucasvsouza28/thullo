@@ -35,59 +35,81 @@ const fetchBoard = async (boardId: string) => {
         {
           title: 'Backlog',
           items: [
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: [
-              {...owner},
-              {...drica},
-              {...nina},
-
-            ]},
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock() },
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock() },
+            {
+              title: 'very important task',
+              tags: ['tag-1', 'tag-2'],
+              image: 'https://random.imagecdn.app/500/150',
+              comments: ['', '', '', ''],
+              attachments: ['', '', ''],
+              users: [
+                {...owner},
+                {...drica},
+                {...nina},
+              ]
+            },
+            {
+              title: 'very important task',
+              tags: [
+                'tag-1',
+                'tag-2'
+              ],
+              image: 'https://random.imagecdn.app/500/150',
+              users: getUsersMock()
+            },
+            {
+              title: 'very important task',
+              tags: [
+                'tag-1',
+                'tag-2'
+              ],
+              image: 'https://random.imagecdn.app/500/150',
+              users: getUsersMock()
+            },
           ]
         },
         {
           title: 'In Progress',
           items: [
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock()},
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock()},
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock()},
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock()},
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock()},
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock()},
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock()},
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock()},
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock()},
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock()},
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock()},
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock()},
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock()},
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock()},
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock()},
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock()},
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock()},
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock()},
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock()},
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock()},
           ]
         },
         {
           title: 'In Review',
           items: [
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock() },
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock() },
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock() },
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock() },
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock() },
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock() },
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock() },
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock() },
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock() },
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock() },
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock() },
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock() },
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock() },
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock() },
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock() },
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock() },
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock() },
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock() },
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock() },
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock() },
           ]
         },
         {
           title: 'Completed',
           items: [
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock() },
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock() },
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock() },
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock() },
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock() },
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock() },
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock() },
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock() },
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock() },
-            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://cataas.com/cat', users: getUsersMock() },
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock() },
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock() },
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock() },
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock() },
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock() },
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock() },
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock() },
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock() },
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock() },
+            { title: 'very important task', tags: ['tag-1', 'tag-2'], image: 'https://random.imagecdn.app/500/150', users: getUsersMock() },
           ]
         },
       ]

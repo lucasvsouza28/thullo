@@ -9,6 +9,7 @@ export const Container = styled('div', {
 export const BoardVisibilityContainer = styled('div', {
   position: 'absolute',
   top: '40px',
+  zIndex: '3',
 
   width: '234px',
 

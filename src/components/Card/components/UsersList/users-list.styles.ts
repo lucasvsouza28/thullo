@@ -17,3 +17,17 @@ export const MoreUsersCaption = styled('span', {
 
   color: '#BDBDBD',
 });
+
+export const ActionCounterContainer = styled('div', {
+  display: 'flex',
+  gap: 5,
+  alignItems: 'center',
+
+  color: '#BDBDBD',
+
+  fontFamily: '$Noto-Sans',
+  fontSize: '10px',
+  fontWeight: '500',
+  lineHeight: '14px',
+  letterSpacing: '-0.035em',
+});
